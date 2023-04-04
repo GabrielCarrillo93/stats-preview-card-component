@@ -24,27 +24,24 @@ html{
     border: 1px solid red;
   }
 
-@media only screen and (max-width: 768px){
-    [class*="col-"]{
-        width: 100%;
-    }  
-
-    .colm{
-        display: flex;
-        flex-direction: column;
-    }
-}
-
 body{
     background-color: hsl(233, 47%, 7%);
     color: white;
     text-align: center;
     display: grid;
-    place-items: center;
+    place-content: center;
+    
+    
 }
 
 main{
     background-color: hsl(244, 38%, 16%);
+    display: flex;
+    align-items: center;
+}
+
+.insights{
+    padding: 2.8rem;
 }
 
 h1, h2{
@@ -68,13 +65,37 @@ p{
 .row{
     display: flex;
     justify-content: space-around;
+    flex-wrap: nowrap;
 }
 
 .imgdsk{
-    width: 100%
+    width: 100%;
 }
 
-
+.imgmbl{
+    display: none;
+}
 
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
+
+@media only screen and (max-width: 768px){
+    [class*="col-"]{
+        width: 100%;
+    }  
+
+
+    .colm{
+        display: flex;
+        flex-direction: column;
+    }
+    .imgmbl{
+        display: block;
+        width: 100%;
+    } 
+    
+    .imgdsk{
+        display: none;
+    }
+    
+}
