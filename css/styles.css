@@ -21,7 +21,7 @@ html{
 
 [class*="col-"] {
     float: left;
-    border: 1px solid red;
+
   }
 
 body{
@@ -29,15 +29,14 @@ body{
     color: white;
     text-align: center;
     display: grid;
-    place-content: center;
-    
-    
+    place-items: center; 
+    min-height: 100vh;
 }
 
 main{
     background-color: hsl(244, 38%, 16%);
-    display: flex;
-    align-items: center;
+    /*display: flex;
+    align-items: center;*/
 }
 
 .insights{
@@ -68,7 +67,8 @@ p{
     flex-wrap: nowrap;
 }
 
-.imgdsk{
+.imgdsk img{
+    height: 100%;
     width: 100%;
 }
 
@@ -84,6 +84,7 @@ p{
         width: 100%;
     }  
 
+    
 
     .colm{
         display: flex;
