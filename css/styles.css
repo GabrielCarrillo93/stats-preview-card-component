@@ -27,7 +27,6 @@ html{
 body{
     background-color: hsl(233, 47%, 7%);
     color: white;
-    text-align: center;
     display: grid;
     place-items: center; 
     min-height: 100vh;
@@ -35,6 +34,7 @@ body{
 
 main{
     background-color: hsl(244, 38%, 16%);
+    border-radius: 15px;
     /*display: flex;
     align-items: center;*/
 }
@@ -63,13 +63,15 @@ p{
 
 .row{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: nowrap;
 }
 
 .imgdsk img{
     height: 100%;
     width: 100%;
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
 }
 
 .imgmbl{
@@ -84,7 +86,19 @@ p{
         width: 100%;
     }  
 
-    
+    body{
+        text-align: center;
+    }
+
+    header, header img{
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+    }
+
+    main{
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
 
     .colm{
         display: flex;
